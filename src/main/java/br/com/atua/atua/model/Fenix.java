@@ -14,240 +14,238 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-@Table(name="bd_atua_fenix")
+@Table(name = "bd_atua_fenix")
 public class Fenix {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	private Date extracao;
-	
+
 	@NotNull
 	private String origem;
-	
+
 	@Column(name = "data_imput")
-    @JsonProperty("data_imput")
+	@JsonProperty("data_imput")
 	private Date dataimput;
-	
+
 	@NotNull
 	@Column(name = "num_parcela")
-    @JsonProperty("num_parcela")
+	@JsonProperty("num_parcela")
 	private String numparcela;
-	
+
 	@NotNull
 	@Column(name = "autor_cadastro")
-    @JsonProperty("autor_cadastro")
+	@JsonProperty("autor_cadastro")
 	private String autorcadastro;
-	
+
 	@NotNull
 	@Column(name = "nome_cliente")
-    @JsonProperty("nome_cliente")
+	@JsonProperty("nome_cliente")
 	private String nomecliente;
-	
+
 	@NotNull
 	private String telefones;
-	
+
 	@NotNull
 	private String gc;
-	
+
 	private String endereco;
-	
+
 	private String estado;
-	
+
 	private String num;
-	
+
 	@Column(name = "descricao_contrato")
-    @JsonProperty("descricao_contrato")
+	@JsonProperty("descricao_contrato")
 	private String descricaocontrato;
-	
+
 	@Size(min = 11, max = 15)
 	private String cpf;
-	
+
 	@Size(min = 14, max = 18)
 	private String cnpj;
-	
+
 	private String cep;
-	
+
 	private String bairro;
-	
+
 	private String cidade;
-	
+
 	@Column(name = "tipo_comercio")
-    @JsonProperty("tipo_comercio")
+	@JsonProperty("tipo_comercio")
 	private String tipocomercio;
-	
+
 	@Column(name = "atividade_principal_empresa")
-    @JsonProperty("atividade_principal_empresa")
+	@JsonProperty("atividade_principal_empresa")
 	private String atividadeprincipalempresa;
-	
+
 	@Column(name = "tipo_empresa")
-    @JsonProperty("tipo_empresa")
+	@JsonProperty("tipo_empresa")
 	private String tipoempresa;
-	
+
 	@Column(name = "nome_fantasia_empresa")
-    @JsonProperty("nome_fantasia_empresa")
+	@JsonProperty("nome_fantasia_empresa")
 	private String nomefantasiaempresa;
-	
+
 	@Column(name = "rua_empresa")
-    @JsonProperty("rua_empresa")
+	@JsonProperty("rua_empresa")
 	private String ruaempresa;
-	
+
 	@Column(name = "compl_empresa")
-    @JsonProperty("compl_empresa")
+	@JsonProperty("compl_empresa")
 	private String complempresa;
-	
+
 	@Column(name = "num_empresa")
-    @JsonProperty("num_empresa")
+	@JsonProperty("num_empresa")
 	private String numempresa;
-	
+
 	@Column(name = "porte_empresa")
-    @JsonProperty("porte_empresa")
+	@JsonProperty("porte_empresa")
 	private String porteempresa;
-	
+
 	@Column(name = "cnae_empresa")
-    @JsonProperty("cnae_empresa")
+	@JsonProperty("cnae_empresa")
 	private String cnaeempresa;
-	
+
 	@Column(name = "razao_social_empresa")
-    @JsonProperty("razao_social_empresa")
+	@JsonProperty("razao_social_empresa")
 	private String razaosocialempresa;
-	
+
 	@Column(name = "cap_social_empresa")
-    @JsonProperty("cap_social_empresa")
+	@JsonProperty("cap_social_empresa")
 	private String capsocialempresa;
-	
+
 	@Column(name = "situacao_empresa")
-    @JsonProperty("situacao_empresa")
+	@JsonProperty("situacao_empresa")
 	private String situacaoempresa;
-	
+
 	@Column(name = "email_empresa")
-    @JsonProperty("email_empresa")
+	@JsonProperty("email_empresa")
 	private String emailempresa;
-	
+
 	@Column(name = "natureza_juridica")
-    @JsonProperty("natureza_juridica")
+	@JsonProperty("natureza_juridica")
 	private String naturezajuridica;
-	
+
 	@Column(name = "data_abertura_empresa")
-    @JsonProperty("data_abertura_empresa")
+	@JsonProperty("data_abertura_empresa")
 	private String dataaberturaempresa;
-	
+
 	@Column(name = "valor_emprestimo")
-    @JsonProperty("valor_emprestimo")
+	@JsonProperty("valor_emprestimo")
 	private double valoremprestimo;
-	
+
 	private double parcelas;
-	
+
 	@Column(name = "valor_parcela")
-    @JsonProperty("valor_parcela")
+	@JsonProperty("valor_parcela")
 	private double valorparcela;
-	
+
 	@Column(name = "data_inicio")
-    @JsonProperty("data_inicio")
+	@JsonProperty("data_inicio")
 	private Date datainicio;
-	
+
 	@Column(name = "taxa_juros")
-    @JsonProperty("taxa_juros")	
+	@JsonProperty("taxa_juros")
 	private double taxajuros;
-	
+
 	private double cet;
-	
+
 	@Column(name = "tipo_recebimento")
-    @JsonProperty("tipo_recebimento")		
+	@JsonProperty("tipo_recebimento")
 	private String tiporecebimento;
-	
+
 	@Column(name = "data_primero_pgt")
-    @JsonProperty("data_primero_pgt")	
+	@JsonProperty("data_primero_pgt")
 	private Date dataprimeropgt;
-	
+
 	@Column(name = "numero_contrato")
-    @JsonProperty("numero_contrato")		
+	@JsonProperty("numero_contrato")
 	private long numerocontrato;
-	
+
 	@Column(name = "chave_baixa_parcela")
-    @JsonProperty("chave_baixa_parcela")	
+	@JsonProperty("chave_baixa_parcela")
 	private String chavebaixaparcela;
-	
+
 	private String chave;
-	
+
 	@Column(name = "ordem_parcela")
-    @JsonProperty("ordem_parcela")	
+	@JsonProperty("ordem_parcela")
 	private long ordemparcela;
-	
+
 	@Column(name = "data_vencimento")
-    @JsonProperty("data_vencimento")
+	@JsonProperty("data_vencimento")
 	private Date datavencimento;
-	
+
 	@Column(name = "dias_em_atraso")
-    @JsonProperty("dias_em_atraso")
+	@JsonProperty("dias_em_atraso")
 	private String diasematraso;
-	
+
 	@Column(name = "dia_da_semana")
-    @JsonProperty("dia_da_semana")
+	@JsonProperty("dia_da_semana")
 	private String diadasemana;
-	
+
 	@Column(name = "valor_parcela_atualizado")
-    @JsonProperty("valor_parcela_atualizado")
+	@JsonProperty("valor_parcela_atualizado")
 	private double valorparcelaatualizado;
-	
+
 	@Column(name = "valor_pago_pelo_cliente")
-    @JsonProperty("valor_pago_pelo_cliente")
+	@JsonProperty("valor_pago_pelo_cliente")
 	private double valorpagopelocliente;
-	
+
 	@Column(name = "data_de_pagamento")
-    @JsonProperty("data_de_pagamento")
+	@JsonProperty("data_de_pagamento")
 	private Date datadepagamento;
-	
+
 	@Column(name = "houve_recebimento")
-    @JsonProperty("houve_recebimento")
+	@JsonProperty("houve_recebimento")
 	private String houverecebimento;
-	
+
 	@Column(name = "cc_credito")
-    @JsonProperty("cc_credito")
+	@JsonProperty("cc_credito")
 	private double cccredito;
-	
+
 	@Column(name = "cc_debito")
-    @JsonProperty("cc_debito")
+	@JsonProperty("cc_debito")
 	private double ccdebito;
-	
+
 	@Column(name = "saldo_corrente")
-    @JsonProperty("saldo_corrente")
+	@JsonProperty("saldo_corrente")
 	private double saldocorrente;
-	
+
 	private String status;
-	
+
 	private String situacao;
-	
+
 	private String rota;
-	
+
 	private String operacao;
-	
+
 	@Column(name = "lucro_esperado")
-    @JsonProperty("lucro_esperado")
+	@JsonProperty("lucro_esperado")
 	private String lucroesperado;
-	
+
 	@Column(name = "tipo_pagamento")
-    @JsonProperty("tipo_pagamento")
+	@JsonProperty("tipo_pagamento")
 	private String tipopagamento;
-	
+
 	@Column(name = "lucro_por_parcela")
-    @JsonProperty("lucro_por_parcela")
+	@JsonProperty("lucro_por_parcela")
 	private double lucroporparcela;
-	
+
 	@Column(name = "valor_disponibilizado")
-    @JsonProperty("valor_disponibilizado")
+	@JsonProperty("valor_disponibilizado")
 	private double valordisponibilizado;
-	
+
 	@Column(name = "agente_cobranca")
-    @JsonProperty("agente_cobranca")
+	@JsonProperty("agente_cobranca")
 	private String agentecobranca;
-	
+
 	@Column(name = "aprovacao_pagamento")
-    @JsonProperty("aprovacao_pagamento")
+	@JsonProperty("aprovacao_pagamento")
 	private String aprovacaopagamento;
-	
-	
 
 	public long getId() {
 		return id;
@@ -768,8 +766,5 @@ public class Fenix {
 	public void setAprovacaopagamento(String aprovacaopagamento) {
 		this.aprovacaopagamento = aprovacaopagamento;
 	}
-	
-	
 
-	
 }
