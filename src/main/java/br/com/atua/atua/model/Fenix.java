@@ -26,9 +26,9 @@ public class Fenix {
 	@NotNull
 	private String origem;
 
-	@Column(name = "data_imput")
-	@JsonProperty("data_imput")
-	private Date dataimput;
+	@Column(name = "data_input")
+	@JsonProperty("data_input")
+	private Date datainput;
 
 	@NotNull
 	@Column(name = "num_parcela")
@@ -271,12 +271,12 @@ public class Fenix {
 		this.origem = origem;
 	}
 
-	public Date getDataimput() {
-		return dataimput;
+	public Date getDatainput() {
+		return datainput;
 	}
 
-	public void setDataimput(Date dataimput) {
-		this.dataimput = dataimput;
+	public void setDatainput(Date datainput) {
+		this.datainput = datainput;
 	}
 
 	public String getNumparcela() {
